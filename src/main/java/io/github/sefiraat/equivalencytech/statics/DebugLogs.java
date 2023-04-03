@@ -1,7 +1,7 @@
 package io.github.sefiraat.equivalencytech.statics;
 
 import io.github.sefiraat.equivalencytech.EquivalencyTech;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.logging.Level;

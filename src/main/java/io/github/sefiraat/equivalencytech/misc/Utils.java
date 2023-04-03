@@ -8,7 +8,7 @@ import io.github.sefiraat.equivalencytech.statics.ContainerStorage;
 import io.github.sefiraat.equivalencytech.statics.Messages;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import net.md_5.bungee.api.ChatColor;
-import org.apache.commons.lang.WordUtils;
+import org.apache.commons.text.WordUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
