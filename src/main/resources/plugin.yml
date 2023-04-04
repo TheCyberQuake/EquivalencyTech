@@ -1,7 +1,7 @@
-name: EquivalencyTech
-version: ${project.version}
-main: io.github.sefiraat.equivalencytech.EquivalencyTech
-api-version: 1.16
+name: SlimeE
+version: 1.0
+main: io.github.thecyberquake.slimee.SlimeE
+api-version: 1.19
 softdepend:
   - Slimefun
   - Galactifun
