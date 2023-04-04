@@ -1,11 +1,7 @@
-<img src="https://github.com/Sefiraat/EquivalencyTech/blob/master/images/wiki/logo_large.png">
+## SlimeE
 
-
-EquivalencyTech (EquiTech) is an attempt to recreate elements of the [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte) mod.
-
-## Download EquivalencyTech
-
-[![Build Status](https://thebusybiscuit.github.io/builds/Sefiraat/EquivalencyTech/master/badge.svg)](https://thebusybiscuit.github.io/builds/Sefiraat/EquivalencyTech/master)
+SlimeE is a WIP plugin working to improve and build upon EquiTech, an abandoned project by Sefiraat.
+The goal is to bring back many of features of Equivalent Exchange (ProjectE) that 
 
 ## Features
 The plugin currently features:
@@ -25,15 +21,16 @@ The plugin currently features:
   * Shift + Click a Condensate chest with an item to assign it's production type. Assuming the player has enough EMC and the item can be synthesized, the items will begin production.
 * Slimefun
   * If Slimefun is installed, this plugin's recipes will be added to the Slimefun Guide. **This plugin does not require Slimefun to run**
+* General fixes compared to the original
+  * Fixes several documented (and undocumented) bugs in EquiTech, and built against latest versions
 
-## Planned Features
+## Planned Features/Changes
+* Slimefun Addon
+  * Move SlimeE from standalone to a full Slimefun addon
 * Automation Upgrades
   * Upgrades to MK2 - MK3 chests for faster throughput
-* Slimefun
-  * As at this first release, only vanilla items + EquiTech items can be condensed / synthesized. A Future update will allow for Slimefun core items to also be added.
-* DankTech
-  * The addition of a new type of pack to DankTech that converts voided items into EMC with a % loss
-  * The addition of a new type of pack that builds from assigned slots using EMC.
+* Modify to bring closer to EE
+  * Transmutation Table, Energy Collector, Energy Condensor
 
 ## Pages
 * **_READ THIS ONE FIRST ->_** [Balancing](https://github.com/Sefiraat/EquivalencyTech/wiki/Balancing) **_<-READ THIS ONE FIRST_**
@@ -47,6 +44,4 @@ The plugin currently features:
 
 ## Thanks!
 
-A big thanks to the owners of **mct.tantrum.org** who have tested nearly everything I have made and really given me direction and drive to make these things.
-
-Another big shoutout to **GentlemanCheesy** of **mc.talosmp.net** for being my first (and as of writing this, only!) sponsor. A few coffee's a month to make me feel better about making these addons <3
+Shoutout to Sefiraat for creating EquiTech, which this project is forked from.
