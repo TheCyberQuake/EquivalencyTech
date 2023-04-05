@@ -8,6 +8,7 @@ import io.github.thecyberquake.slimee.statics.ContainerStorage;
 import io.github.thecyberquake.slimee.statics.Messages;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import net.md_5.bungee.api.ChatColor;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.WordUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -38,8 +39,14 @@ public class Utils {
         }
     }
 
+
     public static String eqNameConfig(String name) {
-        return ChatColor.stripColor(name.replace(" ","_"));
+        if (name.substring(0,2) == "§x") {
+            String first12 = name.substring(0,12);
+            return StringUtils.removeStart(name.replace(" ", "_"), first12);
+        } else {
+            return ChatColor.stripColor(name.replace(" ", "_"));
+        }
     }
 
     public static String toTitleCase(String string) {

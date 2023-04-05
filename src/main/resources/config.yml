@@ -294,7 +294,7 @@ ITEMS:
     - "more EMC."
   CONDENSATOR_CHEST_SET_ITEM: "Shift + Right Click this chest while holding any item to set it."
 GUI:
-  SLOT_BORDER_NAME: "EquiTech"
+  SLOT_BORDER_NAME: "SlimeE"
   SLOT_FILLER_NAME: "No recipe here"
   ORB_ITEM_ADDED: "You have learned how to synthesize a new item!"
   EMC_ITEM_WITHDRAW_ONE: "Synthesize 1"
