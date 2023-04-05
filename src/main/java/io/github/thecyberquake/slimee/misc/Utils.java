@@ -85,7 +85,8 @@ public class Utils {
     public static int totalRecipes(SlimeE plugin) {
         int recExtended = plugin.getEmcDefinitions().getEmcExtended().size();
         int recEQ = plugin.getEmcDefinitions().getEmcEQ().size();
-        return recExtended + recEQ;
+        int recSF = plugin.getEmcDefinitions().getEmcSlimefun().size();
+        return recExtended + recEQ + recSF;
     }
 
     public static boolean canBeSynth(SlimeE plugin, ItemStack itemStack) {
