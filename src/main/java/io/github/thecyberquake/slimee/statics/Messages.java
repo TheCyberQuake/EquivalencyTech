@@ -13,7 +13,7 @@ import java.util.List;
 
 public final class Messages {
 
-    public static final String PREFIX = "" + ChatColor.GRAY + "[EMCTech] ";
+    public static final String PREFIX = "" + ChatColor.GREEN + "[SlimeE] ";
     public static final String SUFFIX = "" + ChatColor.GRAY + "";
 
     public static final ChatColor THEME_WARNING = ChatColor.YELLOW;

@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.thecyberquake</groupId>
   <artifactId>SlimeE</artifactId>
-  <version>modified</version>
+  <version>1.0</version>
   <build>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
+        <version>3.4.1</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -40,7 +40,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
+        <version>3.0.0</version>
         <configuration>
           <junitArtifactName>org.junit.jupiter:junit-jupiter</junitArtifactName>
           <trimStackTrace>false</trimStackTrace>
@@ -130,16 +130,16 @@
     </dependency>
   </dependencies>
   <properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <sonar.projectKey>Sefiraat_EquivalencyTech</sonar.projectKey>
     <sonar.issue.ignore.multicriteria>e1,e2</sonar.issue.ignore.multicriteria>
-    <maven.compiler.source>1.8</maven.compiler.source>
     <sonar.issue.ignore.multicriteria.e2.ruleKey>java:S125</sonar.issue.ignore.multicriteria.e2.ruleKey>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.organization>sefiraat</sonar.organization>
     <sonar.issue.ignore.multicriteria.e1.resourceKey>**</sonar.issue.ignore.multicriteria.e1.resourceKey>
     <sonar.issue.ignore.multicriteria.e2.resourceKey>**</sonar.issue.ignore.multicriteria.e2.resourceKey>
     <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S6212</sonar.issue.ignore.multicriteria.e1.ruleKey>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <sonar.organization>sefiraat</sonar.organization>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <sonar.projectKey>Sefiraat_EquivalencyTech</sonar.projectKey>
   </properties>
 </project>
