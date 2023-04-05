@@ -42,6 +42,7 @@ public class RunnableEQTick extends BukkitRunnable {
 
                 if (!(state instanceof Chest)) {
                     SlimeE.getInstance().getLogger().warning(getErrorDissolutionChest(chestId, location));
+                    ConfigMain.removeDChest(plugin, chestId);
                     continue;
                 }
 
@@ -88,6 +89,7 @@ public class RunnableEQTick extends BukkitRunnable {
 
                 if (!(state instanceof Chest)) {
                     SlimeE.getInstance().getLogger().warning(getErrorCondensateChest(chestId, location));
+                    ConfigMain.removeCChest(plugin, chestId);
                     continue;
                 }
 
@@ -112,9 +114,9 @@ public class RunnableEQTick extends BukkitRunnable {
 
     public static String getErrorDissolutionChest(int chestId, Location location) {
         return MessageFormat.format(
-            "A Dissolution chest (ID: {0}has been removed wrongly. " +
-                "Either replace with a vanilla chest (location : {1}) " +
-                "or remove from dissolution_chests.yml",
+                "A Dissolution chest (ID: {0}) has been removed wrongly. " +
+                        "Either replace with a vanilla chest (location: {1}) " +
+                        "or remove from dissolution_chests.yml",
             chestId,
             location.toString()
         );
@@ -122,8 +124,8 @@ public class RunnableEQTick extends BukkitRunnable {
 
     public static String getErrorCondensateChest(int chestId, Location location) {
         return MessageFormat.format(
-            "A Condensate chest (ID: {0}has been removed wrongly. " +
-                "Either replace with a vanilla chest (location : {1})  " +
+            "A Condensate chest (ID: {0}) has been removed wrongly. " +
+                "Either replace with a vanilla chest (location: {1}) " +
                 "or remove from condensate_chests.yml",
             chestId,
             location.toString()
