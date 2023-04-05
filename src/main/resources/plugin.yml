@@ -6,7 +6,7 @@ softdepend:
   - Slimefun
   - Galactifun
 permissions:
-  equitech.admin:
-    description: Allows access to /et
-  equitech.bypass:
+  slimee.admin:
+    description: Allows access to /se
+  slimee.bypass:
     description: Can open/interact with EMC objects owned by other players
