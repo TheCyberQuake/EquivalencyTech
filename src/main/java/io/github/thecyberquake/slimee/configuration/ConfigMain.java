@@ -356,7 +356,7 @@ public class ConfigMain {
                 }
             }
         }
-        return null;
+        return -2;
     }
 
     public static void removeDChestStore(SlimeE plugin, Integer id) {
@@ -373,17 +373,33 @@ public class ConfigMain {
 
     public static void removeDChest(SlimeE plugin, Integer id) {
         FileConfiguration c = plugin.getConfigMainClass().dChestConfig;
-        c.set(String.valueOf(id), null);
+        if (String.valueOf(id) != null) {
+            c.set(String.valueOf(id), null);
+        }
     }
 
     public static boolean isOwnerDChest(SlimeE plugin, Player player, Integer id) {
         FileConfiguration c = plugin.getConfigMainClass().dChestConfig;
-        return c.getString(id + ".OWNING_PLAYER").equals(player.getUniqueId().toString());
+        String owningPlayer = c.getString(id + ".OWNING_PLAYER");
+        if (owningPlayer == null) {
+            SlimeE.getInstance().getLogger().warning("A Dissolution Chest in block storage (ID " + id.toString() + ") was not found in dissolution_chests.yml! Possible corruption occurred, removing from block storage");
+            removeDChestStore(plugin, id);
+            return false;
+        } else {
+            return owningPlayer.equals(player.getUniqueId().toString());
+        }
     }
 
     public static String getOwnerDChest(SlimeE plugin, Integer id) {
         FileConfiguration c = plugin.getConfigMainClass().dChestConfig;
-        return c.getString(id + ".OWNING_PLAYER");
+        String owningPlayer = c.getString(id + ".OWNING_PLAYER");
+        if (owningPlayer == null) {
+            SlimeE.getInstance().getLogger().warning("A Dissolution Chest in block storage (ID " + id.toString() + ") was not found in dissolution_chests.yml! Possible corruption occurred, removing from block storage");
+            removeDChestStore(plugin, id);
+            return null;
+        } else {
+            return owningPlayer;
+        }
     }
 
     public static Location getDChestLocation(SlimeE plugin, Integer id) {
@@ -437,7 +453,7 @@ public class ConfigMain {
                 }
             }
         }
-        return null;
+        return -2;
     }
 
     public static void removeCChestStore(SlimeE plugin, Integer id) {
@@ -454,17 +470,33 @@ public class ConfigMain {
 
     public static void removeCChest(SlimeE plugin, Integer id) {
         FileConfiguration c = plugin.getConfigMainClass().cChestConfig;
-        c.set(String.valueOf(id), null);
+        if (String.valueOf(id) != null) {
+            c.set(String.valueOf(id), null);
+        }
     }
 
     public static boolean isOwnerCChest(SlimeE plugin, Player player, Integer id) {
         FileConfiguration c = plugin.getConfigMainClass().cChestConfig;
-        return c.getString(id + ".OWNING_PLAYER").equals(player.getUniqueId().toString());
+        String owningPlayer = c.getString(id + ".OWNING_PLAYER");
+        if (owningPlayer == null) {
+            SlimeE.getInstance().getLogger().warning("A Condensate Chest in block storage (ID " + id.toString() + ") was not found in condensate_chests.yml! Possible corruption occurred, removing from block storage");
+            removeCChestStore(plugin, id);
+            return false;
+        } else {
+            return owningPlayer.equals(player.getUniqueId().toString());
+        }
     }
 
     public static String getOwnerCChest(SlimeE plugin, Integer id) {
         FileConfiguration c = plugin.getConfigMainClass().cChestConfig;
-        return c.getString(id + ".OWNING_PLAYER");
+        String owningPlayer = c.getString(id + ".OWNING_PLAYER");
+        if (owningPlayer == null) {
+            SlimeE.getInstance().getLogger().warning("A Condensate Chest in block storage (ID " + id.toString() + ") was not found in condensate_chests.yml! Possible corruption occurred, removing from block storage");
+            removeCChestStore(plugin, id);
+            return null;
+        } else {
+            return owningPlayer;
+        }
     }
 
     public static Location getCChestLocation(SlimeE plugin, Integer id) {
