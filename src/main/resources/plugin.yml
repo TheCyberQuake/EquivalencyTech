@@ -1,10 +1,14 @@
 name: SlimeE
-version: 1.0
+version: ${project.version}
 main: io.github.thecyberquake.slimee.SlimeE
-api-version: 1.19
+author: TheCyberQuake
+description: Bring EE features into Slimefun
+website: https://github.com/TheCyberQuake/SlimeE
+api-version: 1.14
 softdepend:
-  - Slimefun
   - Galactifun
+depend:
+  - Slimefun
 permissions:
   slimee.admin:
     description: Allows access to /se

@@ -1,6 +1,8 @@
 package io.github.thecyberquake.slimee;
 
 import co.aikar.commands.PaperCommandManager;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thecyberquake.slimee.commands.Commands;
 import io.github.thecyberquake.slimee.configuration.ConfigMain;
 import io.github.thecyberquake.slimee.item.EQItems;
@@ -18,7 +20,7 @@ import org.bukkit.plugin.java.JavaPluginLoader;
 
 import java.io.File;
 
-public class SlimeE extends JavaPlugin {
+public class SlimeE extends JavaPlugin implements SlimefunAddon {
 
     private static SlimeE instance;
     private PaperCommandManager commandManager;
@@ -79,7 +81,18 @@ public class SlimeE extends JavaPlugin {
     }
 
     @Override
+    public JavaPlugin getJavaPlugin() {
+        return this;
+    }
+
+    @Override
+    public String getBugTrackerURL() {
+        return "https://github.com/TheCyberQuake/SlimeE/issues";
+    }
+
+    @Override
     public void onEnable() {
+        Config cfg = new Config(this);
 
         getLogger().info("########################################");
         getLogger().info("   SlimeE - Created by TheCyberQuake    ");

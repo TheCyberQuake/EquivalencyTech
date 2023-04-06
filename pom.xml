@@ -18,19 +18,19 @@
                     <relocations>
                         <relocation>
                             <pattern>dev.triumphteam.gui</pattern>
-                            <shadedPattern>io.github.sefiraat.equivalencytech.mfgui</shadedPattern>
+                            <shadedPattern>io.github.thecyberquake.slimee.mfgui</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>co.aikar.commands</pattern>
-                            <shadedPattern>io.github.sefiraat.equivalencytech.acf</shadedPattern>
+                            <shadedPattern>io.github.thecyberquake.slimee.acf</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>co.aikar.locales</pattern>
-                            <shadedPattern>io.github.sefiraat.equivalencytech.locales</shadedPattern>
+                            <shadedPattern>io.github.thecyberquake.slimee.locales</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>org.bstats</pattern>
-                            <shadedPattern>io.github.sefiraat.equivalencytech.bstats</shadedPattern>
+                            <shadedPattern>io.github.thecyberquake.slimee.bstats</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -92,16 +92,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.projectKey>Sefiraat_EquivalencyTech</sonar.projectKey>
-        <sonar.organization>sefiraat</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
-        <sonar.issue.ignore.multicriteria>e1,e2</sonar.issue.ignore.multicriteria>
-        <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S6212</sonar.issue.ignore.multicriteria.e1.ruleKey>
-        <sonar.issue.ignore.multicriteria.e1.resourceKey>**</sonar.issue.ignore.multicriteria.e1.resourceKey>
-
-        <sonar.issue.ignore.multicriteria.e2.ruleKey>java:S125</sonar.issue.ignore.multicriteria.e2.ruleKey>
-        <sonar.issue.ignore.multicriteria.e2.resourceKey>**</sonar.issue.ignore.multicriteria.e2.resourceKey>
     </properties>
 
     <repositories>
@@ -182,14 +172,7 @@
         <dependency>
             <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-28</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.github.thebusybiscuit</groupId>
-                    <artifactId>cscorelib2</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>RC-33</version>
         </dependency>
         <dependency>
             <groupId>dev.dbassett</groupId>
