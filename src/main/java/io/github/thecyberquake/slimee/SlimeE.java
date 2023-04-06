@@ -1,8 +1,12 @@
 package io.github.thecyberquake.slimee;
 
 import co.aikar.commands.PaperCommandManager;
+
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+
 import io.github.thecyberquake.slimee.commands.Commands;
 import io.github.thecyberquake.slimee.configuration.ConfigMain;
 import io.github.thecyberquake.slimee.item.EQItems;
@@ -14,6 +18,8 @@ import io.github.thecyberquake.slimee.runnables.ManagerRunnables;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.SimplePie;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;
@@ -93,6 +99,9 @@ public class SlimeE extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
         Config cfg = new Config(this);
+        NamespacedKey categoryId = new NamespacedKey(this, "SlimeE");
+        CustomItemStack categoryItem = new CustomItemStack(Material.CHEST, "SlimeE");
+        ItemGroup itemGroup = new ItemGroup(categoryId, categoryItem);
 
         getLogger().info("########################################");
         getLogger().info("   SlimeE - Created by TheCyberQuake    ");
