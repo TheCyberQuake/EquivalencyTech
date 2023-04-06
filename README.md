@@ -16,13 +16,13 @@ The plugin currently features:
   * The first time a new item is added, it is 'learned'.
   * Learned items can be synthesized using stored EMC.
 * Dissolution Chest
-  * Any items placed/hopped/trasnfered via cargo into this chest will slowly be dissolved into EMC added directly into the players EMC pool
+  * Any items placed/hopped/transferred via cargo into this chest will slowly be dissolved into EMC added directly into the players EMC pool
 * Condensate Chest
-  * Shift + Click a Condensate chest with an item to assign it's production type. Assuming the player has enough EMC and the item can be synthesized, the items will begin production.
+  * Shift + Click a Condensate chest with an item to assign its production type. Assuming the player has enough EMC and the item can be synthesized, the items will begin production.
 * Slimefun
   * If Slimefun is installed, this plugin's recipes will be added to the Slimefun Guide. **This plugin does not require Slimefun to run**
 * General fixes compared to the original
-  * Fixes several documented (and undocumented) bugs in EquiTech, and built against latest versions
+  * Fixes several documented (and undocumented) bugs in EquiTech, and built against the latest versions
 
 ## Planned Features/Changes
 * Slimefun Addon
